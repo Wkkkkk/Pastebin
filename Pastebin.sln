@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PastebinWebClient", "Pasteb
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PastebinWebServer", "PastebinWebServer\PastebinWebServer.vcxproj", "{B7B62E79-47D0-4227-AAF7-F502C28B6691}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "res", "res", "{0C2089E9-0B07-4F5E-B42A-E730854049CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

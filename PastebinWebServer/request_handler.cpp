@@ -97,14 +97,12 @@ RequestHandler::handle_post_request(const http::request<http::string_body>& requ
     // generate short link for request
     const auto [create_time, shortlink] = generate_create_time_and_md5();
 
-    // save paste into sqlite
+    // save paste
     bool insert_result = DBManager::get_instance().insert_paste(shortlink, create_time, time_to_expire, content);
     if (!insert_result) {
         return { RequestHandler::STATUS::illegal_request,
           "Fail to store request with time [" + std::to_string(time_to_expire) + "] and content: [" + content + "]" };
     }
-
-    // save content&paste_path into file server
 
     // generate response
     json j;
